@@ -32,7 +32,7 @@
                 </div>
                 <select id="icecream-flavor" name="user-flavor">
                     <!--  should show "please choose an option"			 -->
-                    <option value>Please choose an option</option>
+                    <option disabled selected value="">Please choose an option</option>
                     <option value="mint chocolate chip">Mint Chocolate Chip</option>
                     <option value="vanilla">Vanilla</option>
                     <option value="peanut butter">Peanut Butter</option>
@@ -40,14 +40,14 @@
             </div>
 
             <div>
-                <label for="cup-or-cone">Cup or Cone?</label>
+                <label>Cup or Cone?</label>
                 <div class="radio">
                     <input type="radio" id="cone" value="cone" name="cup-or-cone">
-                    <label for="cone" class="cone">Cone</label>
+                    <label for="cone" class="cone" name="cup-or-cone">Cone</label>
                 </div>
                 <div class="radio">
                     <input type="radio" id="cup" value="cup" name="cup-or-cone">
-                    <label for="cup" class="cup">Cup</label>
+                    <label for="cup" class="cup" name="cup-or-cone">Cup</label>
                 </div>
             </div>
             <!-- CHECK  toppings, div checkboxes labels	 -->
@@ -71,7 +71,6 @@
         </form>
     </div>
     <script src="js/index.js"></script>
-    <script src="js/orders.js"></script>
 </body>
 
 </html>
