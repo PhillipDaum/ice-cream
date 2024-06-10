@@ -10,13 +10,22 @@ h2 {
 	color: #f123ff;
 	text-align: center;
 }
-form {
-	display: grid;
-	gap: 1rem;
+
+.form-wrapper {
 	background-color: #2493b3;
 	padding: 3rem;
 	color: white;
 	border-radius: 1rem;
+    width: 60%;
+    margin: auto;
+}
+.required-message {
+    font-size: .8rem;
+    text-align: right;
+}
+form {
+	display: grid;
+	gap: 1rem;
 }
 input {
 	border: none;
@@ -45,8 +54,19 @@ input {
 #icecream-flavor {
 	width: 100%;
 }
-@media (max-width: 500px) {
+@media (max-width: 650px) {
 	.grid-switch {
 		grid-template-columns: 1fr;
 	}
+    .form-wrapper {
+        width: 80%;
+        margin: auto;
+    }
+}
+@media (min-width: 1200px) {
+    .form-wrapper {
+        width: 40%;
+        margin: auto;
+    }
+    
 }
