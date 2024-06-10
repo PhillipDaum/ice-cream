@@ -1,5 +1,6 @@
 const form = document.getElementById("form");
 let userArray = [];
+let dateAndTime;
 
 form.addEventListener("submit", onFormSubmit);
 
@@ -7,22 +8,19 @@ function onFormSubmit(event) {
 	event.preventDefault();
 	const data = new FormData(event.target);
 	const dataObject = Object.fromEntries(data.entries());
-
-	//above is boiler plate code
+    dayDateAndTime();
+    // trying to push date
+	dataObject.date = dateAndTime;
 	userArray.push(dataObject);
 	console.log(userArray);
 	form.reset();
 }
 
 /// adds date to dataObject
-/// day: 
-/// date:
-/// time: 12: AM PM whatever and time zone
-// const date = new Date();
-// const today = date.getDay()
-// const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",]
-// // Day
-// console.log(dayNames[today]);
-// // time
-// console.log(date)
-// // if its less than 12
+function dayDateAndTime() {
+    const date = new Date();
+    const today = date.getDay()
+    const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",]
+    dateAndTime = `${dayNames[today]} ${date.toLocaleString()}`;
+    console.log(dateAndTime);
+}
