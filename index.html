@@ -13,34 +13,34 @@
     <div class="form-wrapper">
         <p class="required-message">*required</p>
         <form action id="form" method="get">
-            <div class="grid-switch">
-                <label for="name">Name*:</label>
-                <input type="text" id="name" name="name" minlength="1" maxlength="24" required>
-            </div>
-            <div class="grid-switch">
-                <label for="email">Email*:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="grid-switch">
-                <label for="phone">Phone*:</label>
-                <!--  can add pattern, etc later -->
-                <input type="tel" id="phone" name="phone" placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-            </div>
+            <fieldset class="user-info">
+                <div class="grid-switch">
+                    <label for="name">Name*:</label>
+                    <input type="text" id="name" name="name" minlength="1" maxlength="24" required>
+                </div>
+                <div class="grid-switch">
+                    <label for="email">Email*:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="grid-switch">
+                    <label for="phone">Phone*:</label>
+                    <!--  can add pattern, etc later -->
+                    <input type="tel" id="phone" name="phone" placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                </div>
+            </fieldset>
             <div>
                 <div>
                     <label for="icecream-flavor">Ice Cream Flavor</label>
                 </div>
                 <select id="icecream-flavor" name="user-flavor">
-                    <!--  should show "please choose an option"			 -->
                     <option disabled selected value="">Please choose an option</option>
                     <option value="mint chocolate chip">Mint Chocolate Chip</option>
                     <option value="vanilla">Vanilla</option>
                     <option value="peanut butter">Peanut Butter</option>
                 </select>
             </div>
-
-            <div>
-                <label>Cup or Cone?</label>
+            <fieldset>
+                <legend>Cup or Cone?</legend>
                 <div class="radio">
                     <input type="radio" id="cone" value="cone" name="cup-or-cone">
                     <label for="cone" class="cone" name="cup-or-cone">Cone</label>
@@ -49,10 +49,9 @@
                     <input type="radio" id="cup" value="cup" name="cup-or-cone">
                     <label for="cup" class="cup" name="cup-or-cone">Cup</label>
                 </div>
-            </div>
-            <!-- CHECK  toppings, div checkboxes labels	 -->
-            <div class="toppings-flex">
-                <label>What toppings would you like?</label>
+            </fieldset>
+            <fieldset class="toppings-flex">
+                <legend>What toppings would you like?</legend>
                 <div>
                     <input type="checkbox" id="topping1" name="ketchup">
                     <label for="topping1">Ketchup</label>
@@ -65,12 +64,10 @@
                     <input type="checkbox" id="topping3" name="jelly-beans">
                     <label for="topping3">Jelly Beans</label>
                 </div>
-            </div>
-            <!-- button place order, can also be an input tag with type submit : )  -->
+            </fieldset>
             <input type="submit" value="Place Order" id="submit-button"></input>
         </form>
     </div>
     <script src="js/index.js"></script>
 </body>
-
 </html>
