@@ -10,7 +10,6 @@ h2 {
 	color: #f123ff;
 	text-align: center;
 }
-
 .form-wrapper {
 	background-color: #2493b3;
 	padding: 3rem;
@@ -23,36 +22,43 @@ h2 {
     font-size: .8rem;
     text-align: right;
 }
-form {
-	display: grid;
-	gap: 1rem;
+fieldset {
+	border: none;
 }
 input {
 	border: none;
 	border-radius: 0.2rem;
 }
-.toppings-flex {
-	display: flex;
-	flex-direction: column;
+.grid-switch {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	padding-top: 1rem;
+}
+.icecream-flavor {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+#icecream-flavor {
+	width: 100%;
 }
 .radio {
 	padding-left: 1rem;
 	padding-top: 0.5rem;
 }
-.grid-switch {
-	display: grid;
-	grid-template-columns: 1fr 2fr;
+.toppings-flex {
+	display: flex;
+	flex-direction: column;
 }
 #submit-button {
-	display: inline-block;
+	display: block;
+	margin: auto;
 	color: #2493b3;
 	padding: 0.7rem;
 	border: none;
-	margin: auto;
 	border-radius: 0.5rem;
 }
-#icecream-flavor {
-	width: 100%;
+#submit-button:hover {
+	cursor: pointer;
 }
 @media (max-width: 650px) {
 	.grid-switch {

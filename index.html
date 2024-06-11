@@ -25,10 +25,11 @@
                 <div class="grid-switch">
                     <label for="phone">Phone*:</label>
                     <!--  can add pattern, etc later -->
-                    <input type="tel" id="phone" name="phone" placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    <input type="tel" id="phone" name="phone" placeholder="555-555-5555"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                 </div>
             </fieldset>
-            <div>
+            <fieldset class="icecream-flavor">
                 <div>
                     <label for="icecream-flavor">Ice Cream Flavor</label>
                 </div>
@@ -38,7 +39,7 @@
                     <option value="vanilla">Vanilla</option>
                     <option value="peanut butter">Peanut Butter</option>
                 </select>
-            </div>
+            </fieldset>
             <fieldset>
                 <legend>Cup or Cone?</legend>
                 <div class="radio">
@@ -65,9 +66,12 @@
                     <label for="topping3">Jelly Beans</label>
                 </div>
             </fieldset>
-            <input type="submit" value="Place Order" id="submit-button"></input>
+            <fieldset>
+                <input type="submit" value="Place Order" id="submit-button"></input>
+            </fieldset>
         </form>
     </div>
     <script src="js/index.js"></script>
 </body>
+
 </html>
